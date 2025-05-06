@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Tejaswi Arella</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            background-color: #0a192f;
+            color: #e6f1ff;
+            font-family: 'Calibre', sans-serif;
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #64ffda;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .bg-custom-dark {
+            background-color: rgba(10, 25, 47, 0.85);
+            backdrop-filter: blur(10px);
+        }
+        .text-highlight {
+            color: #64ffda;
+        }
+        .btn-primary {
+            background-color: transparent;
+            color: #64ffda;
+            border: 1px solid #64ffda;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: rgba(100, 255, 218, 0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .card {
+            background-color: #112240;
+            border: none;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .animated-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(100, 255, 218, 0.3);
+            animation: float 8s infinite ease-in-out;
+        }
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+            }
+            25% {
+                transform: translateY(-20px) translateX(10px);
+            }
+            50% {
+                transform: translateY(0) translateX(20px);
+            }
+            75% {
+                transform: translateY(20px) translateX(10px);
+            }
+        }
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #233554;
+            overflow: hidden;
+        }
+        .progress {
+            height: 100%;
+            background-color: #64ffda;
+            border-radius: 4px;
+            transition: width 1.5s ease;
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        .social-icon:hover {
+            transform: translateY(-5px);
+            color: #64ffda;
+        }
+        .skill-card {
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+        .skill-card:hover {
+            border-left: 3px solid #64ffda;
+            transform: translateX(5px);
+        }
+        .education-timeline {
+            position: relative;
+        }
+        .education-timeline::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background-color: #233554;
+            top: 0;
+            bottom: 0;
+            left: 20px;
+        }
+        .timeline-dot {
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background-color: #64ffda;
+            position: absolute;
+            left: 14px;
+            top: 20px;
+            transform: translateY(-50%);
+        }
+        .timeline-content {
+            margin-left: 50px;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg" id="animated-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-custom-dark z-50 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-semibold text-highlight">T<span class="text-white">A</span></a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-white hover:text-highlight transition-all">Home</a>
+                <a href="about.html" class="nav-link text-white hover:text-highlight transition-all">About</a>
+                <a href="projects.html" class="nav-link text-white hover:text-highlight transition-all">Projects</a>
+                <a href="experience.html" class="nav-link text-white hover:text-highlight transition-all">Experience</a>
+                <a href="contact.html" class="nav-link text-white hover:text-highlight transition-all">Contact</a>
+            </div>
+            <button class="md:hidden text-white focus:outline-none" id="menuBtn">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+        <div class="hidden md:hidden bg-custom-dark px-4 py-2" id="mobileMenu">
+            <a href="index.html" class="block py-2 text-white hover:text-highlight transition-all">Home</a>
+            <a href="about.html" class="block py-2 text-white hover:text-highlight transition-all">About</a>
+            <a href="projects.html" class="block py-2 text-white hover:text-highlight transition-all">Projects</a>
+            <a href="experience.html" class="block py-2 text-white hover:text-highlight transition-all">Experience</a>
+            <a href="contact.html" class="block py-2 text-white hover:text-highlight transition-all">Contact</a>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section class="pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-start mb-20">
+                <div class="md:w-1/2 mb-12 md:mb-0 animate__animated animate__fadeInLeft">
+                    <h2 class="text-4xl font-bold mb-2 text-white">About Me</h2>
+                    <div class="w-20 h-1 bg-highlight mb-8"></div>
+                    <p class="text-gray-400 text-lg mb-6">
+                        I am a third-year undergraduate student passionate about innovation and technology. As a tech enthusiast, I explore new advancements in AI & ML, and Web Development, applying my knowledge to real-world problems through projects and internships.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-6">
+                        My journey in technology began with a fascination for creating solutions that can make a difference. With a strong foundation in programming and a keen interest in artificial intelligence, I'm focused on developing applications that combine cutting-edge algorithms with user-friendly interfaces.
+                    </p>
+                    <p class="text-gray-400 text-lg mb-6">
+                        I am eager to contribute my skills and creativity to cutting-edge technological solutions and to further develop my expertise in this rapidly evolving field.
+                    </p>
+                    <div class="mt-8">
+                        <a href="contact.html" class="btn-primary px-8 py-3 rounded-md font-semibold">Get In Touch</a>
+                        <a href="assets/resume.pdf" class="btn-primary ml-4 px-8 py-3 rounded-md font-semibold" download>Download CV</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 animate__animated animate__fadeInRight">
+                    <div class="flex justify-center">
+                        <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-lg overflow-hidden border-4 border-blue-600 shadow-2xl">
+                            <img src="/api/placeholder/400/400" alt="Tejaswi Arella" class="w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-60"></div>
+                            <div class="absolute bottom-0 left-0 right-0 p-4">
+                                <h3 class="text-xl font-bold text-white">Tejaswi Arella</h3>
+                                <p class="text-highlight">Software Developer</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold mb-2 text-white">Education</h2>
+                <div class="w-20 h-1 bg-highlight mb-10"></div>
+                
+                <div class="education-timeline">
+                    <div class="relative mb-12 animate__animated animate__fadeInUp">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-semibold text-white">Bachelor of Technology, Computer Science</h3>
+                            <p class="text-highlight mb-1">Indian Institute of Technology - 2021-2025</p>
+                            <p class="text-gray-400">Pursuing a bachelor's degree with a focus on AI and machine learning. Current GPA: 3.8/4.0</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative mb-12 animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-semibold text-white">High School Diploma</h3>
+                            <p class="text-highlight mb-1">Delhi Public School - 2019-2021</p>
+                            <p class="text-gray-400">Graduated with distinction in Mathematics and Computer Science. Class rank: Top 5%</p>
+                        </div>
+                    </div>
+                    
+                    <div class="relative animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3 class="text-xl font-semibold text-white">Online Certifications</h3>
+                            <p class="text-highlight mb-1">Various Platforms - 2020-Present</p>
+                            <ul class="text-gray-400 list-disc ml-5">
+                                <li>Deep Learning Specialization - Coursera</li>
+                                <li>Full Stack Web Development - Udemy</li>
+                                <li>Data Structures and Algorithms - Stanford Online</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Skills Section -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold mb-2 text-white">Skills</h2>
+                <div class="w-20 h-1 bg-highlight mb-10"></div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Technical Skills -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-white">Technical Skills</h3>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Python</span>
+                                <span class="text-highlight">90%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">JavaScript/React</span>
+                                <span class="text-highlight">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Machine Learning</span>
+                                <span class="text-highlight">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">Java</span>
+                                <span class="text-highlight">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <div class="flex justify-between mb-1">
+                                <span class="text-gray-300">SQL/Databases</span>
+                                <span class="text-highlight">70%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 70%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Soft Skills -->
+                    <div>
+                        <h3 class="text-xl font-semibold mb-6 text-white">Soft Skills</h3>
+                        
+                        <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg mb-4 skill-card">
+                            <h4 class="font-semibold text-white">Problem Solving</h4>
+                            <p class="text-gray-400">Analytical thinking and creative solutions to complex problems</p>
+                        </div>
+                        
+                        <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg mb-4 skill-card">
+                            <h4 class="font-semibold text-white">Teamwork & Collaboration</h4>
+                            <p class="text-gray-400">Experience working in diverse teams and agile environments</p>
+                        </div>
+                        
+                        <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg mb-4 skill-card">
+                            <h4 class="font-semibold text-white">Project Management</h4>
+                            <p class="text-gray-400">Planning, execution, and delivery of technical projects</p>
+                        </div>
+                        
+                        <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg mb-4 skill-card">
+                            <h4 class="font-semibold text-white">Communication</h4>
+                            <p class="text-gray-400">Clear and effective technical and non-technical communication</p>
+                        </div>
+                        
+                        <div class="bg-blue-900 bg-opacity-30 p-4 rounded-lg skill-card">
+                            <h4 class="font-semibold text-white">Adaptability</h4>
+                            <p class="text-gray-400">Quick learning and adapting to new technologies and environments</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Interests -->
+            <div>
+                <h2 class="text-3xl font-bold mb-2 text-white">Interests</h2>
+                <div class="w-20 h-1 bg-highlight mb-10"></div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="card p-6 rounded-lg animate__animated animate__fadeInUp">
+                        <i class="fas fa-robot text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Artificial Intelligence</h3>
+                        <p class="text-gray-400">Exploring neural networks, NLP, and emerging AI technologies</p>
+                    </div>
+                    
+                    <div class="card p-6 rounded-lg animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
+                        <i class="fas fa-code text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Software Development</h3>
+                        <p class="text-gray-400">Building intuitive, responsive, and scalable applications</p>
+                    </div>
+                    
+                    <div class="card p-6 rounded-lg animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                        <i class="fas fa-mountain text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Hiking</h3>
+                        <p class="text-gray-400">Exploring nature trails and challenging peaks on weekends</p>
+                    </div>
+                    
+                    <div class="card p-6 rounded-lg animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                        <i class="fas fa-book text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Reading</h3>
+                        <p class="text-gray-400">Science fiction, technology trends, and philosophical works</p>
+                    </div>
+                    
+                    <div class="card p-6 rounded-lg animate__animated animate__fadeInUp" style="animation-delay: 0.8s;">
+                        <i class="fas fa-chess text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Chess</h3>
+                        <p class="text-gray-400">Strategic gameplay and participating in local tournaments</p>
+                    </div>
+                    
+                    <div class="card p-6 rounded-lg animate__animated animate__fadeInUp" style="animation-delay: 1s;">
+                        <i class="fas fa-music text-4xl text-highlight mb-4"></i>
+                        <h3 class="text-xl font-semibold mb-2 text-white">Music</h3>
+                        <p class="text-gray-400">Playing guitar and exploring diverse musical genres</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-blue-900 bg-opacity-30 py-10">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold text-white">Tejaswi Arella</h2>
+                    <p class="text-gray-400">Software Developer & Tech Enthusiast</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="social-icon text-white hover:text-highlight">
+                        <i class="fab fa-github text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-white hover:text-highlight">
+                        <i class="fab fa-linkedin text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-white hover:text-highlight">
+                        <i class="fab fa-twitter text-2xl"></i>
+                    </a>
+                    <a href="#" class="social-icon text-white hover:text-highlight">
+                        <i class="fas fa-envelope text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-blue-800 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2025 Tejaswi Arella. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Create background particles
+        const animatedBg = document.getElementById('animated-bg');
+        const particleCount = 15;
+        
+        for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            
+            // Random properties
+            const size = Math.random() * 100 + 50;
+            const left = Math.random() * 100;
+            const top = Math.random() * 100;
+            const delay = Math.random() * 4;
+            
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${left}%`;
+            particle.style.top = `${top}%`;
+            particle.style.opacity = '0.05';
+            particle.style.animationDelay = `${delay}s`;
+            
+            animatedBg.appendChild(particle);
+        }
+        
+        // Progress bar animation
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 300);
+            });
+        }
+        
+        // Trigger animations when elements are visible
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.classList.contains('progress-bar')) {
+                        animateProgressBars();
+                    }
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.progress-bar').forEach(bar => {
+            observer.observe(bar);
+        });
+        
+        // Run animation on page load
+        window.addEventListener('load', () => {
+            setTimeout(animateProgressBars, 500);
+        });
+    </script>
+</body>
+</html>
