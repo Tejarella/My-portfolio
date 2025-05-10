@@ -161,7 +161,7 @@
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 text-white animate__animated animate__fadeInDown">My Projects</h1>
                 <div class="w-20 h-1 bg-highlight mb-8 animate__animated animate__fadeInLeft"></div>
                 <p class="text-gray-400 text-lg md:text-xl mb-8 max-w-2xl animate__animated animate__fadeIn">
-                    A showcase of my technical projects, ranging from machine learning applications to web development. 
+                    A showcase of my technical projects, ranging from web development to machine learning applications and embedded systems.
                     Each project demonstrates different skills and innovative solutions to real-world problems.
                 </p>
                 
@@ -170,8 +170,7 @@
                     <button class="category-btn active px-6 py-2 rounded-full text-highlight border border-highlight hover:bg-highlight hover:bg-opacity-10 transition-all" data-category="all">All Projects</button>
                     <button class="category-btn px-6 py-2 rounded-full text-gray-400 border border-gray-700 hover:border-highlight hover:text-highlight transition-all" data-category="ai-ml">AI & ML</button>
                     <button class="category-btn px-6 py-2 rounded-full text-gray-400 border border-gray-700 hover:border-highlight hover:text-highlight transition-all" data-category="web">Web Development</button>
-                    <button class="category-btn px-6 py-2 rounded-full text-gray-400 border border-gray-700 hover:border-highlight hover:text-highlight transition-all" data-category="mobile">Mobile Apps</button>
-                    <button class="category-btn px-6 py-2 rounded-full text-gray-400 border border-gray-700 hover:border-highlight hover:text-highlight transition-all" data-category="others">Others</button>
+                    <button class="category-btn px-6 py-2 rounded-full text-gray-400 border border-gray-700 hover:border-highlight hover:text-highlight transition-all" data-category="embedded">Embedded Systems</button>
                 </div>
             </div>
         </div>
@@ -181,148 +180,20 @@
     <section class="py-12">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Project 1 -->
-                <div class="project-card ai-ml animate__animated animate__fadeInUp">
-                    <div class="card rounded-lg overflow-hidden shadow-lg">
-                        <div class="bg-blue-900 h-48 flex items-center justify-center">
-                            <i class="fas fa-brain text-6xl text-highlight opacity-50"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">Servigoo</h3>
-                            <p class="text-gray-400 mb-4">A deep learning facial recognition system built with TensorFlow and OpenCV, capable of identifying individuals in real-time video streams.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">TensorFlow</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Python</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">OpenCV</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">CNN</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <a href="#" class="text-highlight hover:underline flex items-center">
-                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-                                <div class="flex space-x-3">
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card web animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
-                    <div class="card rounded-lg overflow-hidden shadow-lg">
-                        <div class="bg-blue-900 h-48 flex items-center justify-center">
-                            <i class="fas fa-shopping-cart text-6xl text-highlight opacity-50"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">E-Commerce Platform</h3>
-                            <p class="text-gray-400 mb-4">A full-stack e-commerce solution with user authentication, product management, cart functionality, and payment integration.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">React</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Node.js</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">MongoDB</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Stripe API</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <a href="#" class="text-highlight hover:underline flex items-center">
-                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-                                <div class="flex space-x-3">
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card mobile animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
-                    <div class="card rounded-lg overflow-hidden shadow-lg">
-                        <div class="bg-blue-900 h-48 flex items-center justify-center">
-                            <i class="fas fa-mobile-alt text-6xl text-highlight opacity-50"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">Fitness Tracking App</h3>
-                            <p class="text-gray-400 mb-4">A cross-platform mobile application that tracks workouts, nutrition, and progress with personalized insights and recommendations.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">React Native</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Firebase</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Redux</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Google Fit API</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <a href="#" class="text-highlight hover:underline flex items-center">
-                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-                                <div class="flex space-x-3">
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4 -->
-                <div class="project-card ai-ml animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
-                    <div class="card rounded-lg overflow-hidden shadow-lg">
-                        <div class="bg-blue-900 h-48 flex items-center justify-center">
-                            <i class="fas fa-chart-line text-6xl text-highlight opacity-50"></i>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">Stock Price Predictor</h3>
-                            <p class="text-gray-400 mb-4">A machine learning model that predicts stock prices using LSTM neural networks and historical market data with visualization tools.</p>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Python</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Keras</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Pandas</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">LSTM</span>
-                            </div>
-                            <div class="flex justify-between items-center">
-                                <a href="#" class="text-highlight hover:underline flex items-center">
-                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
-                                </a>
-                                <div class="flex space-x-3">
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fab fa-github"></i>
-                                    </a>
-                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
-                                        <i class="fas fa-external-link-alt"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5 -->
-                <div class="project-card others animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                <!-- Project 1 - Servigoo -->
+                <div class="project-card web animate__animated animate__fadeInUp">
                     <div class="card rounded-lg overflow-hidden shadow-lg">
                         <div class="bg-blue-900 h-48 flex items-center justify-center">
                             <i class="fas fa-home text-6xl text-highlight opacity-50"></i>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">Smart Home Automation</h3>
-                            <p class="text-gray-400 mb-4">An IoT system that controls smart home devices through a central hub with voice commands and mobile app integration.</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Servigoo – Home Services Web App</h3>
+                            <p class="text-gray-400 mb-4">Built a prototype for booking on-demand home services with user login and service listings functionality.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Raspberry Pi</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Python</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">MQTT</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">NodeJS</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">HTML</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">CSS</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">JavaScript</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Bootstrap</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <a href="#" class="text-highlight hover:underline flex items-center">
@@ -341,20 +212,148 @@
                     </div>
                 </div>
 
-                <!-- Project 6 -->
-                <div class="project-card web animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                <!-- Project 2 - Zenture -->
+                <div class="project-card web animate__animated animate__fadeInUp" style="animation-delay: 0.2s;">
                     <div class="card rounded-lg overflow-hidden shadow-lg">
                         <div class="bg-blue-900 h-48 flex items-center justify-center">
-                            <i class="fas fa-tasks text-6xl text-highlight opacity-50"></i>
+                            <i class="fas fa-spa text-6xl text-highlight opacity-50"></i>
                         </div>
                         <div class="p-6">
-                            <h3 class="text-xl font-bold mb-2 text-white">Collaborative Task Manager</h3>
-                            <p class="text-gray-400 mb-4">A real-time collaborative task management system with team workspaces, progress tracking, and analytics dashboard.</p>
+                            <h3 class="text-xl font-bold mb-2 text-white">Zenture - Yoga-based Project</h3>
+                            <p class="text-gray-400 mb-4">Designed and developed a responsive frontend for a yoga-focused website with modern UI elements.</p>
                             <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Vue.js</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Firebase</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Express</span>
-                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Socket.io</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">HTML</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">CSS</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">JavaScript</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Responsive Design</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-highlight hover:underline flex items-center">
+                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - Music Genre Classification -->
+                <div class="project-card ai-ml animate__animated animate__fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="bg-blue-900 h-48 flex items-center justify-center">
+                            <i class="fas fa-music text-6xl text-highlight opacity-50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Music Genre Classification</h3>
+                            <p class="text-gray-400 mb-4">Created a machine learning model using audio features (MFCCs, Chroma) to classify music genres, deployed via a Streamlit web app.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Python</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Machine Learning</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Streamlit</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Audio Processing</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-highlight hover:underline flex items-center">
+                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - Home Loan Prediction -->
+                <div class="project-card ai-ml animate__animated animate__fadeInUp" style="animation-delay: 0.4s;">
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="bg-blue-900 h-48 flex items-center justify-center">
+                            <i class="fas fa-home text-6xl text-highlight opacity-50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Home Loan Prediction</h3>
+                            <p class="text-gray-400 mb-4">Implemented a classification model using algorithms like Logistic Regression and Decision Trees to predict loan approvals based on applicant data.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Python</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Logistic Regression</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Decision Trees</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Data Analysis</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-highlight hover:underline flex items-center">
+                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - Railway Crack Detector -->
+                <div class="project-card embedded animate__animated animate__fadeInUp" style="animation-delay: 0.5s;">
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="bg-blue-900 h-48 flex items-center justify-center">
+                            <i class="fas fa-train text-6xl text-highlight opacity-50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Railway Crack Detector</h3>
+                            <p class="text-gray-400 mb-4">Designed a robotic system with IR sensors to detect cracks in railway tracks, enhancing safety through automated inspection.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Embedded Systems</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">IR Sensors</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Robotics</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Arduino</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <a href="#" class="text-highlight hover:underline flex items-center">
+                                    Learn more <i class="fas fa-arrow-right ml-2"></i>
+                                </a>
+                                <div class="flex space-x-3">
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="#" class="text-gray-400 hover:text-highlight transition-all">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - Automatic Roofing System -->
+                <div class="project-card embedded animate__animated animate__fadeInUp" style="animation-delay: 0.6s;">
+                    <div class="card rounded-lg overflow-hidden shadow-lg">
+                        <div class="bg-blue-900 h-48 flex items-center justify-center">
+                            <i class="fas fa-seedling text-6xl text-highlight opacity-50"></i>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold mb-2 text-white">Automatic Roofing System for Crops</h3>
+                            <p class="text-gray-400 mb-4">Built a robotic setup with environmental sensors to automate the opening/closing of crop covers based on weather conditions.</p>
+                            <div class="flex flex-wrap gap-2 mb-6">
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Embedded Systems</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Environmental Sensors</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Automation</span>
+                                <span class="skill-tag px-3 py-1 rounded-full text-xs text-gray-300">Arduino</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <a href="#" class="text-highlight hover:underline flex items-center">
